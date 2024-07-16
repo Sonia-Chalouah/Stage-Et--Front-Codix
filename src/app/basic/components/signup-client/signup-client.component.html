@@ -1,1 +1,49 @@
-<p>signup-client works!</p>
+<div class="bg">
+    <div class="parent">
+      <div class="left">
+        <div nz-col>
+          <h1 style="margin-left: 90px;">Client Signup</h1>
+        </div>
+        <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()" [nzLayout]="'vertical'">
+          <nz-form-item>
+            <nz-form-control [nzErrorTip]="'The input is not a valid E-mail!'">
+              <input nz-input placeholder="E-mail" formControlName="email" />
+            </nz-form-control>
+          </nz-form-item>
+          <nz-form-item>
+            <nz-form-control [nzErrorTip]="'The input is not a valid password!'">
+              <input nz-input type="password" placeholder="Password" formControlName="password" />
+            </nz-form-control>
+          </nz-form-item>
+          <nz-form-item>
+            <nz-form-control [nzErrorTip]="'The input is not valid!'">
+              <input nz-input type="password" placeholder="Confirm Password" formControlName="checkPassword" />
+            </nz-form-control>
+          </nz-form-item>
+          <nz-form-item>
+            <nz-form-control [nzErrorTip]="'The input is not valid name!'">
+              <input nz-input placeholder="Name" formControlName="name" />
+            </nz-form-control>
+          </nz-form-item>
+          <nz-form-item>
+            <nz-form-control [nzErrorTip]="'The input is not valid lastname!'">
+              <input nz-input placeholder="Lastname" formControlName="lastname" />
+            </nz-form-control>
+          </nz-form-item>
+          <nz-form-item>
+            <nz-form-control [nzErrorTip]="'The input is not valid phone!'">
+              <input nz-input placeholder="Phone" formControlName="phone" />
+            </nz-form-control>
+          </nz-form-item>
+          <button nz-button class="login-form-button login-form-margin custom-button" [nzType]="'primary'">
+            Register
+          </button>
+          Or <a routerLink="/login">login now!</a>
+        </form>
+      </div>
+      <div class="right">
+        <img src="../../../../assets/img/webp/person15.webp" alt="Description of image">
+      </div>
+    </div>
+  </div>
+  

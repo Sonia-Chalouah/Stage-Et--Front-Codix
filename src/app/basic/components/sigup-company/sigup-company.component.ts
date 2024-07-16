@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AuthService } from '../../services/auth/auth.service';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { NzNotificationService } from 'ng-zorro-antd/notification';
+import { AuthService } from '../../services/auth/auth.service';
 
 @Component({
-  selector: 'app-signup-client',
-  templateUrl: './signup-client.component.html',
-  styleUrls: ['./signup-client.component.css']
+  selector: 'app-sigup-company',
+  templateUrl: './sigup-company.component.html',
+  styleUrl: './sigup-company.component.css'
 })
-export class SignupClientComponent implements OnInit {
+export class SigupCompanyComponent implements OnInit {
 
   validateForm!: FormGroup;
 
@@ -24,7 +24,7 @@ export class SignupClientComponent implements OnInit {
     this.validateForm = this.fb.group({
       email: [null, [Validators.email, Validators.required]],
       name: [null, [Validators.required]],
-      lastname: [null, [Validators.required]],
+      adresse: [null, [Validators.required]],
       phone: [null, [Validators.required, Validators.pattern('^[0-9]*$')]],
       password: [null, [Validators.required]],
       checkPassword: [null, [Validators.required, this.confirmationValidator]],
@@ -33,13 +33,13 @@ export class SignupClientComponent implements OnInit {
 
   submitForm(): void {
     if (this.validateForm.valid) {
-      this.registerClient();
+      this.registerCompany();
     } else {
       this.validateFormControls();
     }
   }
 
-  private registerClient(): void {
+  private registerCompany(): void {
     const signupRequestDTO = this.validateForm.value;
     this.authService.registerClient(signupRequestDTO).subscribe(
       res => {
@@ -90,3 +90,4 @@ export class SignupClientComponent implements OnInit {
     return {};
   };
 }
+

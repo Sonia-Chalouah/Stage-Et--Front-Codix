@@ -1,0 +1,95 @@
+/* Styles globaux */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f9fa;
+}
+
+.bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.parent {
+    display: flex;
+    width: 80%;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.left {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+h1 {
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form nz-form-item {
+    margin-bottom: 20px;
+}
+
+button {
+    margin-top: 20px;
+}
+
+.login-form-margin {
+    margin-bottom: 20px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+}
+
+input:focus {
+    outline: none;
+    border-color: #80bdff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.custom-button {
+    background-color: #000;
+    border: 3px solid #000; /* Ajoute une bordure noire */
+    color: #fff; /* Texte en blanc pour un meilleur contraste */
+}
+
+.custom-button:hover {
+    background-color: #333; /* Couleur de fond légèrement plus claire au survol */
+    border-color: #333; /* Bordure légèrement plus claire au survol */
+}

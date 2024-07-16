@@ -1,11 +1,28 @@
-<form>
-    <div>
-        <label for="username">Nom d'utilisateur :</label>
-        <input type="text" id="username" name="username" required>
+<div class="bg">
+    <div class="parent">
+        <div class="left">
+            <div nz-col>
+                <h1 style="margin-left : 100px ;">Login Now</h1>
+            </div>
+            <form nz-form  >
+                <nz-form-item>
+                    <nz-form-control nzHasFeedback="the input is not valid E-mail!">
+                        <input nz-input placeholder="E-mail" formControlName="email" id="email"/>
+                    </nz-form-control>
+                </nz-form-item>
+                <nz-form-item>
+                    <nz-form-control nzHasFeedback="the input is not valid password!">
+                        <input nz-input type="password" placeholder="password" formControlName="email" id="email"/>
+                    </nz-form-control>
+                </nz-form-item>
+                <button nz-button class="login-form-button login-form-margin custom-button" [nzType]="'primary'">
+                  Login
+                </button>
+                Or <a routerLink="/login">login now!</a>
+            </form>
+        </div>
+        <div class="right">
+            <img src="../../../../assets/img/webp/person15.webp" alt="Description of image">
+        </div>
     </div>
-    <div>
-        <label for="password">Mot de passe :</label>
-        <input type="password" id="password" name="password" required>
-    </div>
-    <button type="submit">Se connecter</button>
-</form>
+</div>
