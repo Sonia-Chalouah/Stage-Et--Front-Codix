@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
+logout() {
+throw new Error('Method not implemented.');
+}
+isClientLoggedIn: any;
+isCompanyLoggerdIn: any;
+isCompanyLoggedIn: any;
 
 }

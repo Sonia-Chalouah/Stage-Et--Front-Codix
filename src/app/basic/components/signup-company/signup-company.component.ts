@@ -5,11 +5,11 @@ import { NzNotificationService } from 'ng-zorro-antd/notification';
 import { AuthService } from '../../services/auth/auth.service';
 
 @Component({
-  selector: 'app-sigup-company',
-  templateUrl: './sigup-company.component.html',
-  styleUrl: './sigup-company.component.css'
+  selector: 'app-signup-company',
+  templateUrl: './signup-company.component.html',
+  styleUrls: ['./signup-company.component.css']
 })
-export class SigupCompanyComponent implements OnInit {
+export class SignupCompanyComponent implements OnInit {
 
   validateForm!: FormGroup;
 
@@ -41,7 +41,7 @@ export class SigupCompanyComponent implements OnInit {
 
   private registerCompany(): void {
     const signupRequestDTO = this.validateForm.value;
-    this.authService.registerClient(signupRequestDTO).subscribe(
+    this.authService.registerCompany(signupRequestDTO).subscribe(
       res => {
         this.showSuccessNotification();
         this.navigateToLogin();
@@ -87,7 +87,6 @@ export class SigupCompanyComponent implements OnInit {
     } else if (control.value !== this.validateForm.controls['password'].value) {
       return { confirm: true, error: true };
     }
-    return {};
+    return null;
   };
 }
-

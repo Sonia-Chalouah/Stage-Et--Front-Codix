@@ -1,91 +1,18 @@
-<!DOCTYPE html>
-<html class="h-100" lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="A growing collection of ready to use components for the CSS framework Bootstrap 5" />
-    <link rel="apple-touch-icon" sizes="180x180" href="../../../../assets/img/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="../../../../assets/img/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="../../../../assets/img/favicon-16x16.png" />
-    <link rel="icon" type="image/png" sizes="96x96" href="../../../../assets/img/people1.jpg" />
-    <meta name="author" content="Holger Koenemann" />
-    <meta name="generator" content="Eleventy v2.0.0" />
-    <meta name="HandheldFriendly" content="true" />
-    <title>Register a new account</title>
-    <link rel="stylesheet" href="../../../../assets/css/theme.min.css" />
 
-    <style>
-        /* inter-300 - latin */
-        @font-face {
-            font-family: "Inter";
-            font-style: normal;
-            font-weight: 300;
-            font-display: swap;
-            src: local(""), url("./fonts/inter-v12-latin-300.woff2") format("woff2"),
-                url("./fonts/inter-v12-latin-300.woff") format("woff");
-        }
-
-        @font-face {
-            font-family: "Inter";
-            font-style: normal;
-            font-weight: 500;
-            font-display: swap;
-            src: local(""), url("./fonts/inter-v12-latin-500.woff2") format("woff2"),
-                url("./fonts/inter-v12-latin-500.woff") format("woff");
-        }
-        @font-face {
-            font-family: "Inter";
-            font-style: normal;
-            font-weight: 700;
-            font-display: swap;
-            src: local(""), url("./fonts/inter-v12-latin-700.woff2") format("woff2"),
-                url("./fonts/inter-v12-latin-700.woff") format("woff");
-        }
-    </style>
-</head>
-
-<body class="d-flex h-100 w-100" data-bs-spy="scroll" data-bs-target="#navScroll">
-    <div class="h-100 container-fluid">
-        <div class="row align-items-center justify-content-center">
-            <div class="col-md-6">
-                <header class="mb-4">
-                    <a class="navbar-brand fs-4" href="/">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-layers-half" viewBox="0 0 16 16">
-                            <path d="M8.235 1.559a.5.5 0 0 0-.47 0l-7.5 4a.5.5 0 0 0 0 .882L3.188 8 .264 9.559a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882L12.813 8l2.922-1.559a.5.5 0 0 0 0-.882l-7.5-4zM8 9.433 1.562 6 8 2.567 14.438 6 8 9.433z" />
-                        </svg>
-                        <span class="ms-1 fw-bolder">Booking Services</span>
-                    </a>
-                </header>
-                <main>
-                    <h1 class="mb-4">Register a new account</h1>
-
-                    <form>
-                        <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Email address</label>
-                            <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" />
-                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Password</label>
-                            <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" />
-                        </div>
-                        <div class="mb-3 form-check py-3">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-                            <label class="form-check-label" for="exampleCheck1">
-                                If you really don´t want any newsletter <strong>check this box</strong>. Then you just agree to receive our marketing mails and product stuff. If you check this box
-                                <strong>we will not send out our newsletter</strong> to you at all...on mondays.
-                            </label>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-xl mb-4">Submit</button>
-                        <p class="small text-muted border-top py-2">
-                            Psssst! By creating an account you agree to our well hidden terms of service. They are here...somewhere...for legal reasons...but you would not find ´em!
-                        </p>
-                    </form>
-                </main>
-                
+<body>
+    <div class="bg">
+        <div class="parent">
+            <div class="left">
+                <h1>Inscrivez-vous</h1>
+                <p>Sélectionnez votre rôle pour commencer.</p>
+                <div class="button-group">
+                    <a href="/register_client" class="custom-button">S'inscrire en tant que Client</a>
+                    <a href="register_company" class="custom-button">S'inscrire en tant que Company</a>
+                </div>
             </div>
-           
+            <div class="right">
+                <img src="../../../../assets/img/services.jpg" alt="Image de présentation">
+            </div>
         </div>
     </div>
-</body>
-</html>
+

@@ -21,7 +21,7 @@ import { NzGridModule } from 'ng-zorro-antd/grid';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NzNotificationModule } from 'ng-zorro-antd/notification';
 import { HttpClientModule } from '@angular/common/http';
-import { SigupCompanyComponent } from './basic/components/sigup-company/sigup-company.component';
+import { SignupCompanyComponent } from './basic/components/signup-company/signup-company.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +35,8 @@ import { SigupCompanyComponent } from './basic/components/sigup-company/sigup-co
     CompanyDashboardComponent,
     NotfoundComponent,
     SignupComponent,
-    SigupCompanyComponent,
+    SignupCompanyComponent,
+    SignupCompanyComponent,
   ],
   imports: [
     BrowserModule,

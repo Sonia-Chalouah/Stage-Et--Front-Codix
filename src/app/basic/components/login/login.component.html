@@ -2,23 +2,23 @@
     <div class="parent">
         <div class="left">
             <div nz-col>
-                <h1 style="margin-left : 100px ;">Login Now</h1>
+                <h1 style="margin-left: 100px;">Login Now</h1>
             </div>
-            <form nz-form  >
+            <form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()">
                 <nz-form-item>
-                    <nz-form-control nzHasFeedback="the input is not valid E-mail!">
-                        <input nz-input placeholder="E-mail" formControlName="email" id="email"/>
+                    <nz-form-control nzHasFeedback [nzErrorTip]="'The input is not valid E-mail!'">
+                        <input nz-input placeholder="Username" formControlName="userName" id="userName"/>
                     </nz-form-control>
                 </nz-form-item>
                 <nz-form-item>
-                    <nz-form-control nzHasFeedback="the input is not valid password!">
-                        <input nz-input type="password" placeholder="password" formControlName="email" id="email"/>
+                    <nz-form-control nzHasFeedback [nzErrorTip]="'The input is not valid password!'">
+                        <input nz-input type="password" placeholder="Password" formControlName="password" id="password"/>
                     </nz-form-control>
                 </nz-form-item>
                 <button nz-button class="login-form-button login-form-margin custom-button" [nzType]="'primary'">
                   Login
                 </button>
-                Or <a routerLink="/login">login now!</a>
+                Or <a routerLink="/register">Register now!</a>
             </form>
         </div>
         <div class="right">

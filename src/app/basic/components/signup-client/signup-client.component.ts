@@ -20,7 +20,7 @@ export class SignupClientComponent implements OnInit {
     private notification: NzNotificationService
   ) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.validateForm = this.fb.group({
       email: [null, [Validators.email, Validators.required]],
       name: [null, [Validators.required]],
@@ -69,7 +69,7 @@ export class SignupClientComponent implements OnInit {
   }
 
   private navigateToLogin(): void {
-    this.router.navigate(['/login']);
+    this.router.navigate(['/login']); // Assurez-vous que '/login' est correctement configuré dans vos routes
   }
 
   private validateFormControls(): void {
@@ -87,6 +87,6 @@ export class SignupClientComponent implements OnInit {
     } else if (control.value !== this.validateForm.controls['password'].value) {
       return { confirm: true, error: true };
     }
-    return {};
+    return null;
   };
 }
