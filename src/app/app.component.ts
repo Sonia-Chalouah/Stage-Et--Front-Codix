@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { UserStoargeService } from './basic/services/stoarge/user-stoarge.service';
+import { UserStorageService } from './basic/services/stoarge/user-stoarge.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,20 +10,20 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'stage-ete-2024-front';
 
-  isClientLoggedIn: boolean = UserStoargeService.isClientLoggedIn();
-  isCompanyLoggedIn: boolean = UserStoargeService.isCompanyLoggedIn();
+  isClientLoggedIn: boolean = UserStorageService.isClientLoggedIn();
+  isCompanyLoggedIn: boolean = UserStorageService.isCompanyLoggedIn();
 
   constructor(private router: Router) {}
 
   ngOnInit() {
     this.router.events.subscribe(() => {
-      this.isClientLoggedIn = UserStoargeService.isClientLoggedIn();
-      this.isCompanyLoggedIn = UserStoargeService.isCompanyLoggedIn();
+      this.isClientLoggedIn = UserStorageService.isClientLoggedIn();
+      this.isCompanyLoggedIn = UserStorageService.isCompanyLoggedIn();
     });
   }
 
   logout() {
-    UserStoargeService.signout();
+    UserStorageService.signout();
     this.router.navigate(['login']);
   }
 }

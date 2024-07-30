@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map, Observable } from 'rxjs';
-import { UserStoargeService } from '../stoarge/user-stoarge.service';
+import { UserStorageService } from '../stoarge/user-stoarge.service';
 
 const BASIC_URL = 'http://localhost:8081';
 export const AUTH_HEADER = 'authorization';
@@ -10,9 +10,15 @@ export const AUTH_HEADER = 'authorization';
   providedIn: 'root'
 })
 export class AuthService {
+  isCompanyLoggedIn() {
+    throw new Error('Method not implemented.');
+  }
+  isClientLoggedIn() {
+    throw new Error('Method not implemented.');
+  }
 
   constructor(private http: HttpClient,
-    private userStoargeService: UserStoargeService
+    private userStoargeService: UserStorageService
   ) { }
 
   registerClient(signupRequestDTO: any): Observable<any> {

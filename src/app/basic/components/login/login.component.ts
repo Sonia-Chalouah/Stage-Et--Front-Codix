@@ -3,7 +3,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { NzNotificationService } from 'ng-zorro-antd/notification';
 import { AuthService } from '../../services/auth/auth.service';
-import { UserStoargeService } from '../../services/stoarge/user-stoarge.service';
+import { UserStorageService } from '../../services/stoarge/user-stoarge.service';
 
 @Component({
   selector: 'app-login',
@@ -33,9 +33,9 @@ export class LoginComponent implements OnInit {
         .subscribe(
           res => {
             console.log(res);
-            if (UserStoargeService.isClientLoggedIn) { 
+            if (UserStorageService.isClientLoggedIn) { 
               this.router.navigateByUrl('client/dashboard')
-            }else if (UserStoargeService.isCompanyLoggedIn){
+            }else if (UserStorageService.isCompanyLoggedIn){
               this.router.navigateByUrl('company/dashboard')
             }
             
