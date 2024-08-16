@@ -1,0 +1,69 @@
+/* Style spécifique pour CreateAdComponent */
+
+.bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(255, 255, 255);
+}
+
+.parent {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 600px; /* Limite la largeur maximale pour que la carte ne devienne pas trop large */
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centre le texte à l'intérieur de la carte */
+}
+
+.child {
+    width: 100%;
+}
+
+.imgDiv {
+    margin-bottom: 20px;
+}
+
+.profile-badge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.upload-label {
+    display: block;
+    cursor: pointer;
+}
+
+.profile {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+input[type="file"] {
+    margin-top: 10px;
+}
+
+button {
+    margin-top: 20px;
+}
+
+.login-form-button {
+    background-color: #000;
+    border: 3px solid #000;
+    color: #fff;
+}
+
+.login-form-button:hover {
+    background-color: #333;
+    border-color: #333;
+}
+
+nz-form-item {
+    margin-bottom: 20px;
+}

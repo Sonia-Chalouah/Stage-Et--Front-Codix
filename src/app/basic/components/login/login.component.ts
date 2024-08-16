@@ -33,12 +33,11 @@ export class LoginComponent implements OnInit {
         .subscribe(
           res => {
             console.log(res);
-            if (UserStorageService.isClientLoggedIn) { 
-              this.router.navigateByUrl('client/dashboard')
-            }else if (UserStorageService.isCompanyLoggedIn){
-              this.router.navigateByUrl('company/dashboard')
+            if (UserStorageService.isClientLoggedIn()) {  // Ajout des parenthèses
+              this.router.navigateByUrl('client/dashboard');
+            } else if (UserStorageService.isCompanyLoggedIn()) {  // Ajout des parenthèses
+              this.router.navigateByUrl('company/dashboard');
             }
-            
           },
           error => {
             this.notification.error(
@@ -48,6 +47,7 @@ export class LoginComponent implements OnInit {
             );
           }
         );
-    } 
+    }
   }
+  
 }

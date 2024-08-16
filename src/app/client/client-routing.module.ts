@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ClientComponent } from './client.component';
-import { ClientDashboardComponent } from '../client-dashboard/client-dashboard.component';
+import { ClientDashboardComponent } from './pages/client-dashboard/client-dashboard.component';
 
 const routes: Routes = [
   { path: '', component: ClientComponent },

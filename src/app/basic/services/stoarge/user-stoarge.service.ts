@@ -48,9 +48,10 @@ export class UserStorageService {
 
   static getUserRole(): string {
     const user = this.getUser();
+    console.log('User role:', user ? user.role : 'No user');  // Ajout d'un log pour vérifier
     return user ? user.role : '';
   }
-
+  
   static isClientLoggedIn(): boolean {
     if (!this.getToken()) {
       return false;
@@ -58,7 +59,7 @@ export class UserStorageService {
     const role: string = this.getUserRole();
     return role === 'CLIENT';
   }
-
+  
   static isCompanyLoggedIn(): boolean {
     if (!this.getToken()) {
       return false;
@@ -66,6 +67,7 @@ export class UserStorageService {
     const role: string = this.getUserRole();
     return role === 'COMPANY';
   }
+  
 
   static signout(): void {
     window.localStorage.removeItem(TOKEN);
