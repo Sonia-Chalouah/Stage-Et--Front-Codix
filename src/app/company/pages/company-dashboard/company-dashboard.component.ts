@@ -10,7 +10,7 @@ import { UserStorageService } from '../../../basic/services/stoarge/user-stoarge
 export class CompanyDashboardComponent {
   constructor(private router: Router, private userStorageService: UserStorageService) {}
 
-  // Méthode de déconnexion
+ 
   Logout(): void {
     UserStorageService.signout();
     this.router.navigate(['login']);

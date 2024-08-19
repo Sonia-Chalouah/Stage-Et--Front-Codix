@@ -1,0 +1,20 @@
+<app-company-dashboard></app-company-dashboard>
+
+<div class="bg">
+    <div class="card" *ngFor="let ad of ads">
+        <div class="image-container">
+            <img class="profile" [src]="updateImg(ad.retrnedImg, ad.mimeType)" />
+        </div>
+        <div class="card-content">
+            <h2>{{ad.serviceName}}</h2>
+            <hr>
+            <h5>Price: <b>{{ad.price}}</b></h5>
+            <h5>Description: <b>{{ad.description}}</b></h5>
+            <hr>
+            <div>
+                <button nzSize="small" nz-button nzType="primary" class="update" routerLink="/company/ad/{{ad.id}}">Update</button>
+                <button nzSize="small" nz-button nzType="primary" class="delete" nzDanger>Delete</button>
+            </div>
+        </div>
+    </div>
+</div>

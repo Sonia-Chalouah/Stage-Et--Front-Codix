@@ -1,4 +1,4 @@
-/* Style spécifique pour CreateAdComponent */
+
 
 .bg {
     display: flex;
@@ -12,12 +12,12 @@
     display: flex;
     flex-direction: column;
     width: 80%;
-    max-width: 600px; /* Limite la largeur maximale pour que la carte ne devienne pas trop large */
+    max-width: 600px; 
     background: rgba(255, 255, 255, 0.9);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Centre le texte à l'intérieur de la carte */
+    text-align: center; 
 }
 
 .child {

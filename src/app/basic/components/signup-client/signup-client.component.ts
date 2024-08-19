@@ -69,7 +69,7 @@ export class SignupClientComponent implements OnInit {
   }
 
   private navigateToLogin(): void {
-    this.router.navigate(['/login']); // Assurez-vous que '/login' est correctement configuré dans vos routes
+    this.router.navigate(['/login']); 
   }
 
   private validateFormControls(): void {

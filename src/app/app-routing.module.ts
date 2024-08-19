@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: 'register_company', component: SignupCompanyComponent },
   { path: 'client', loadChildren: () => import('./client/client.module').then(m => m.ClientModule) }, 
   { path: 'company', loadChildren: () => import('./company/company.module').then(m => m.CompanyModule) },
-  { path: '**', component: NotfoundComponent }  // Notez que cette route doit être placée en dernier
+  { path: '**', component: NotfoundComponent }  
 ];
 
 @NgModule({

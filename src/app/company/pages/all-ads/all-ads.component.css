@@ -1,0 +1,81 @@
+
+.bg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-top: 50px; 
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px; 
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; 
+}
+
+.image-container {
+    display: flex;
+    justify-content: center; 
+    margin-bottom: 15px; 
+}
+
+.profile {
+    max-width: 100%;
+    border-radius: 10px;
+    height: auto;
+}
+
+.card-content {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    color: #108ee9;
+    margin: 0 0 10px; 
+}
+
+hr {
+    margin: 10px 0;
+}
+
+.update {
+    background-color: skyblue;
+    border: 3px solid skyblue;
+    color: #fff;
+    padding: 5px 10px; 
+}
+
+.update:hover {
+    background-color: #b3d9ff;
+    border-color: #b3d9ff;
+}
+
+.delete {
+    background-color: red;
+    border: 3px solid red;
+    color: #fff;
+    padding: 5px 10px; 
+}
+
+.delete:hover {
+    background-color: #cc0000;
+    border-color: #cc0000;
+}
+
+
+.card-content > div {
+    margin-top: auto; 
+    text-align: right; 
+}
+
+button {
+    margin-left: 10px; 
+}
