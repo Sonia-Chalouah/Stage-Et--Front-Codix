@@ -14,7 +14,7 @@ export class AllAdsComponent {
   constructor(
     private companyService: CompanyserviceService,
     private notification: NzNotificationService,
-    private cdr: ChangeDetectorRef // Injecter ChangeDetectorRef
+    private cdr: ChangeDetectorRef 
   ) { }
 
   ngOnInit() {
@@ -33,7 +33,7 @@ export class AllAdsComponent {
   }
 
   deleteAd(adId: any) {
-    console.log('Attempting to delete ad with ID:', adId); // Ajout du log
+    console.log('Attempting to delete ad with ID:', adId); 
   
     this.companyService.deleteAd(adId).subscribe(
       res => {
