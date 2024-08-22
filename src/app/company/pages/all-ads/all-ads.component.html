@@ -12,8 +12,8 @@
             <h5>Description: <b>{{ad.description}}</b></h5>
             <hr>
             <div>
-                <button nzSize="small" nz-button nzType="primary" class="update" routerLink="/company/ad/{{ad.id}}">Update</button>
-                <button nzSize="small" nz-button nzType="primary" class="delete" nzDanger>Delete</button>
+                <button nzSize="small" nz-button nzType="primary" class="update" routerLink="/company/update/{{ad.id}}">Update</button>
+                <button (click)="deleteAd(ad.id)" nzSize="small" nz-button nzType="primary" class="delete" nzDanger>Delete</button>
             </div>
         </div>
     </div>

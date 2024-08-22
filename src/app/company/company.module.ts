@@ -11,13 +11,15 @@ import { CompanyComponent } from './company.component';
 import { CreateAdComponent } from './pages/create-ad/create-ad.component';
 import { CompanyDashboardComponent } from './pages/company-dashboard/company-dashboard.component';
 import { AllAdsComponent } from './pages/all-ads/all-ads.component';
+import { UpdateAdComponent } from './pages/update-ad/update-ad.component';
 
 @NgModule({
   declarations: [
     CompanyComponent,
     CreateAdComponent,
     CompanyDashboardComponent,
-    AllAdsComponent
+    AllAdsComponent,
+    UpdateAdComponent
   ],
   imports: [
     CommonModule,

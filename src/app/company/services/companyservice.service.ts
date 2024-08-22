@@ -27,6 +27,24 @@ getAllAdsByUserId(): Observable<any> {
   });
 }
 
+getAdById(adId:any): Observable<any> {
+  return this.http.get(BASIC_URL + `api/company/ad/${adId}`,  {
+      headers: this.createAuthorizationHeader()
+  });
+}
+
+updateAd(adId:any, adDTO: any): Observable<any> {
+  return this.http.put(BASIC_URL + `api/company/ad/${adId}`, adDTO, {
+    headers: this.createAuthorizationHeader()
+  });
+}
+
+deleteAd(adId:any): Observable<any> {
+  return this.http.delete(BASIC_URL + `api/company/ad/${adId}`,  {
+    headers: this.createAuthorizationHeader()
+  });
+}
+
   createAuthorizationHeader() : HttpHeaders{
     let authHeaders = new HttpHeaders();
     return authHeaders.set(
