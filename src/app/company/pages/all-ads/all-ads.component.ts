@@ -43,15 +43,8 @@ export class AllAdsComponent {
           { nzDuration: 5000 }
         );
         this.ads = this.ads.filter((ad: any) => ad.id !== adId);
-      },
-      err => {
-        console.error('Erreur lors de la suppression:', err);
-        this.notification.error(
-          'Erreur', 
-          'Impossible de supprimer l\'annonce',
-          { nzDuration: 5000 }
-        );
       }
+     
     );
   }
   
