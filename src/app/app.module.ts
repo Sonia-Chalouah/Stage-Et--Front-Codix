@@ -10,7 +10,6 @@ import { HomeComponent } from './shared/home/home.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { LoginComponent } from './basic/components/login/login.component';
 import { SignupClientComponent } from './basic/components/signup-client/signup-client.component';
-import { ClientDashboardComponent } from './client/pages/client-dashboard/client-dashboard.component';
 import { NotfoundComponent } from './shared/notfound/notfound.component';
 import { SignupComponent } from './basic/components/signup/signup.component';
 import { NzButtonModule } from 'ng-zorro-antd/button';
@@ -30,7 +29,6 @@ import { SignupCompanyComponent } from './basic/components/signup-company/signup
     FooterComponent,
     LoginComponent,
     SignupClientComponent,
-    ClientDashboardComponent,
     NotfoundComponent,
     SignupComponent,
     SignupCompanyComponent,

@@ -1,0 +1,114 @@
+.bg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-top: 50px; 
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px; 
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; 
+}
+
+.image-container {
+    display: flex;
+    justify-content: center; 
+    margin-bottom: 15px; 
+}
+
+.profile {
+    max-width: 100%;
+    border-radius: 10px;
+    height: auto;
+}
+
+.card-content {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    color: #108ee9;
+    margin: 0 0 10px; 
+}
+
+hr {
+    margin: 10px 0;
+}
+
+.view {
+    background-color: lightgreen;
+    border: 3px solid lightgreen;
+    color: #fff;
+    padding: 5px 10px; 
+}
+
+.view:hover {
+    background-color: #98fb98;
+    border-color: #98fb98;
+}
+
+.card-content > div {
+    margin-top: auto; 
+    text-align: right; 
+}
+
+button {
+    margin-left: 10px; 
+}
+
+form[nz-form] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form[nz-form] input[nz-input] {
+    width: 30%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #d9d9d9;
+    transition: border-color 0.3s ease-in-out;
+}
+
+form[nz-form] input[nz-input]:focus {
+    border-color: #108ee9;
+    box-shadow: 0 0 8px rgba(16, 142, 233, 0.6);
+}
+
+form[nz-form] button[nz-button] {
+    margin-left: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    background-color: #108ee9;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+form[nz-form] button[nz-button]:hover {
+    background-color: #0e7bc1;
+}
+
+form[nz-form] button[nz-button][disabled] {
+    background-color: #bfbfbf;
+    cursor: not-allowed;
+}
+
