@@ -19,8 +19,8 @@
                 <td>{{ booking.reservationStatus }}</td>
                 <td>
                     <span *ngIf="booking.reservationStatus === 'PENDING'">
-                        <button class="btn-approve">Approve</button>
-                        <button class="btn-reject">Reject</button>
+                        <button class="btn-approve " (click)="changeBookingStatus(booking.id , 'Approve')">Approve</button>
+                        <button class="btn-reject" (click)="changeBookingStatus(booking.id , 'Reject')">Reject</button>
                     </span>
                 </td>
             </tr>

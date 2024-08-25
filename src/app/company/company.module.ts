@@ -14,6 +14,7 @@ import { AllAdsComponent } from './pages/all-ads/all-ads.component';
 import { UpdateAdComponent } from './pages/update-ad/update-ad.component';
 import { CompanyNavbarComponent } from './pages/company-navbar/company-navbar.component';
 import { NzTableModule } from 'ng-zorro-antd/table';
+import { ToastrModule } from 'ngx-toastr';
 @NgModule({
   declarations: [
     CompanyComponent,
@@ -34,6 +35,11 @@ import { NzTableModule } from 'ng-zorro-antd/table';
     NzGridModule,
     NzNotificationModule,
     NzTableModule,
+    ToastrModule.forRoot({
+      timeOut: 5000, // Durée d'affichage de la notification
+      positionClass: 'toast-top-right', // Position de la notification
+      preventDuplicates: true,
+    }),
   ]
 })
 export class CompanyModule { }

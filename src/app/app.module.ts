@@ -21,6 +21,7 @@ import { NzNotificationModule } from 'ng-zorro-antd/notification';
 import { HttpClientModule } from '@angular/common/http';
 import { SignupCompanyComponent } from './basic/components/signup-company/signup-company.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,6 +34,7 @@ import { SignupCompanyComponent } from './basic/components/signup-company/signup
     SignupComponent,
     SignupCompanyComponent,
     SignupCompanyComponent,
+    
   ],
   imports: [
     BrowserModule,

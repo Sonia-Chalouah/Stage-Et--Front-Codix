@@ -1,0 +1,26 @@
+<app-client-navbar></app-client-navbar>
+
+<div class="table-container">
+  <table class="custom-table">
+    <thead>
+      <tr>
+        <th>Service</th>
+        <th>Date</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let booking of bookServices">
+        <td>{{ booking.serviceName }}</td>
+        <td>{{ booking.bookDate | date: 'dd/MM/yyyy' }}</td>
+        <td>{{ booking.reservationStatus }}</td>
+        <td>
+          <span *ngIf="booking.reviewStatus == 'FALSE'">
+            <button class="btn-approve" routerLink="/client/review/{{booking.id}}" >Review</button>
+          </span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

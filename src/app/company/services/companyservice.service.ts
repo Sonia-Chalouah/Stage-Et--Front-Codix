@@ -52,6 +52,13 @@ getAllAdBookings(): Observable<any> {
   });
 }
 
+changeBookingStatus(bookingId: number, status: string): Observable<any> {
+  return this.http.put(BASIC_URL + `api/company/booking/${bookingId}/${status}`, {}, {
+    headers: this.createAuthorizationHeader()
+  });
+}
+
+
   createAuthorizationHeader() : HttpHeaders{
     let authHeaders = new HttpHeaders();
     return authHeaders.set(

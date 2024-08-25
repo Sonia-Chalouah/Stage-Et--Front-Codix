@@ -1,0 +1,65 @@
+/* Container styling to center the content */
+.parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height for vertical centering */
+    background-color: #ffffff; /* Light background color for better contrast */
+}
+
+.child {
+    width: 100%;
+    max-width: 600px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Heading styling */
+h2 {
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Textarea styling */
+textarea {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Rate component styling */
+nz-rate {
+    display: block;
+    margin: 20px 0;
+}
+
+/* Button styling */
+button {
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #000;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    align-self: center;
+}
+
+button:hover {
+    background-color: #333;
+    border-color: #333;
+}

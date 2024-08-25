@@ -12,13 +12,17 @@ import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzNotificationModule } from 'ng-zorro-antd/notification';
 import { AdDetailComponent } from './pages/ad-detail/ad-detail.component';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
-
+import { MyBookingsComponent } from './pages/my-bookings/my-bookings.component';
+import { ReviewComponent } from './pages/review/review.component';
+import { NzRateModule } from 'ng-zorro-antd/rate';
 @NgModule({
   declarations: [
     ClientComponent,
     ClientNavbarComponent,
     ClientDashboardComponent,
-    AdDetailComponent
+    AdDetailComponent,
+    MyBookingsComponent,
+    ReviewComponent
   ],
   imports: [
     CommonModule,
@@ -29,6 +33,7 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
     NzInputModule,
     NzButtonModule,
     NzGridModule,
+    NzRateModule,
     NzNotificationModule,
     BsDatepickerModule.forRoot() 
   ]

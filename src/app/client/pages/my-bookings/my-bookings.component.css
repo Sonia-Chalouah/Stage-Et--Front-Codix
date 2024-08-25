@@ -1,7 +1,7 @@
 /* Container for the table with padding for spacing from the navbar */
 .table-container {
     padding: 30px;
-    margin-top: 90px;
+    margin-top: 60px;
 }
 
 /* Custom table styles */
@@ -44,6 +44,8 @@
     cursor: pointer;
     background-color: #28a745;
     color: #fff;
+    margin-left: 10px;
+    margin-top: 15px;
 }
 
 .btn-approve:hover {
