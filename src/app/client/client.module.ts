@@ -11,13 +11,14 @@ import { NzGridModule } from 'ng-zorro-antd/grid';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzNotificationModule } from 'ng-zorro-antd/notification';
 import { AdDetailComponent } from './pages/ad-detail/ad-detail.component';
-
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
 @NgModule({
   declarations: [
     ClientComponent,
-    ClientNavbarComponent, 
-    ClientDashboardComponent, AdDetailComponent 
+    ClientNavbarComponent,
+    ClientDashboardComponent,
+    AdDetailComponent
   ],
   imports: [
     CommonModule,
@@ -28,7 +29,8 @@ import { AdDetailComponent } from './pages/ad-detail/ad-detail.component';
     NzInputModule,
     NzButtonModule,
     NzGridModule,
-    NzNotificationModule
+    NzNotificationModule,
+    BsDatepickerModule.forRoot() 
   ]
 })
 export class ClientModule { }

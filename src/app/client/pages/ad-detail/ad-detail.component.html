@@ -1,27 +1,48 @@
 <app-client-navbar></app-client-navbar>
 
 <div class="bg" *ngIf="ad">
-    <div class="ad-details-container">
-        <div class="details-section">
-            <div class="ad-detail">
-                <div nz-col nzSpan="8">
-                    <img class="profile" [src]="avatarUrl" alt="profile" />
-                </div>
-                <div nz-col nzSpan="16">
-                    <h2>{{ad.serviceName}}</h2>
-                    <h5>Price : <b>{{ad.price}}</b></h5>
-                    <h5>Description : <b>{{ad.description}}</b> - Company Name : <b>{{ad.companyName}}</b></h5>
-                </div>
-            </div>
+  <div class="ad-details-container">
+    <div class="details-section">
+      <div class="ad-detail">
+        <div nz-col nzSpan="8">
+          <img class="profile" [src]="avatarUrl" alt="profile" />
         </div>
-
-        <div class="reservation-section"></div>
+        <div nz-col nzSpan="16">
+          <h2>{{ad.serviceName}}</h2>
+          <h5>Price : <b>{{ad.price}}</b></h5>
+          <h5>Description : <b>{{ad.description}}</b> - Company Name : <b>{{ad.companyName}}</b></h5>
+        </div>
+      </div>
     </div>
 
-
-        <div class="review-section">
-           
+    <div class="reservation-section">
+      <div>
+        <div nz-row>
+          <h2>Book Service</h2>
         </div>
+        <form [formGroup]="validateForm" (ngSubmit)="bookService()">
+          <div nz-row>
+            <div nz-col nzSpan="24">
+              <div class="form-group">
+                <label for="bookDate">Date of Booking</label>
+                <input type="text"
+                       id="bookDate"
+                       class="form-control"
+                       bsDatepicker
+                       formControlName="bookDate"
+                       [bsConfig]="{ containerClass: 'theme-dark-blue' }">
+              </div>
+            </div>
+          </div>
+          <button class="book-button"  [disabled]="validateForm.invalid" type="submit">
+            Book
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="review-section">
+   
+  </div>
 </div>
-
-

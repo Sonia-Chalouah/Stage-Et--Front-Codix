@@ -30,6 +30,13 @@ export class ClientService {
     });
   }
 
+  bookService(bookDTO:any): Observable<any> {
+   
+    return this.http.post(BASIC_URL + `api/client/book-service`, bookDTO ,  {
+        headers: this.createAuthorizationHeader()
+    });
+  }
+
   createAuthorizationHeader() : HttpHeaders{
     let authHeaders = new HttpHeaders();
     return authHeaders.set(
