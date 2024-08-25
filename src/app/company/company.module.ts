@@ -12,14 +12,16 @@ import { CreateAdComponent } from './pages/create-ad/create-ad.component';
 import { CompanyDashboardComponent } from './pages/company-dashboard/company-dashboard.component';
 import { AllAdsComponent } from './pages/all-ads/all-ads.component';
 import { UpdateAdComponent } from './pages/update-ad/update-ad.component';
-
+import { CompanyNavbarComponent } from './pages/company-navbar/company-navbar.component';
+import { NzTableModule } from 'ng-zorro-antd/table';
 @NgModule({
   declarations: [
     CompanyComponent,
     CreateAdComponent,
     CompanyDashboardComponent,
     AllAdsComponent,
-    UpdateAdComponent
+    UpdateAdComponent,
+    CompanyNavbarComponent
   ],
   imports: [
     CommonModule,
@@ -30,7 +32,8 @@ import { UpdateAdComponent } from './pages/update-ad/update-ad.component';
     NzInputModule,
     NzButtonModule,
     NzGridModule,
-    NzNotificationModule
+    NzNotificationModule,
+    NzTableModule,
   ]
 })
 export class CompanyModule { }

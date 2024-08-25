@@ -45,6 +45,13 @@ deleteAd(adId:any): Observable<any> {
   });
 }
 
+getAllAdBookings(): Observable<any> {
+  const companyId = UserStorageService.getUserId();
+  return this.http.get(BASIC_URL + `api/company/bookings/${companyId}`,  {
+      headers: this.createAuthorizationHeader()
+  });
+}
+
   createAuthorizationHeader() : HttpHeaders{
     let authHeaders = new HttpHeaders();
     return authHeaders.set(

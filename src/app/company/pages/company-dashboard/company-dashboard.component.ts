@@ -1,18 +1,25 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-import { UserStorageService } from '../../../basic/services/stoarge/user-stoarge.service';
+import { Component, OnInit } from '@angular/core';
+import { CompanyserviceService } from '../../services/companyservice.service';
 
 @Component({
   selector: 'app-company-dashboard',
   templateUrl: './company-dashboard.component.html',
-  styleUrl: './company-dashboard.component.css'
+  styleUrls: ['./company-dashboard.component.css']
 })
-export class CompanyDashboardComponent {
-  constructor(private router: Router, private userStorageService: UserStorageService) {}
+export class CompanyDashboardComponent implements OnInit {
 
- 
-  Logout(): void {
-    UserStorageService.signout();
-    this.router.navigate(['login']);
+  bookings: any;
+
+  constructor(private companyService: CompanyserviceService) {}
+
+  ngOnInit() {
+    this.getAllAdBookings();
+  }
+
+  getAllAdBookings() {
+    this.companyService.getAllAdBookings().subscribe(res => {
+      console.log(res);
+      this.bookings = res;
+    });
   }
 }
