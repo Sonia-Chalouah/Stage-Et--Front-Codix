@@ -2,37 +2,26 @@
 
 <div class="bg" *ngIf="ad">
     <div class="ad-details-container">
-        <div class="details-reservation-container">
-        
-            <div class="details-section">
-                <div class="ad-detail">
-                    <div nz-col nzSpan="8">
-                        <img class="profile" [src]="avatarUrl" alt="profile" />
-                    </div>
-                    <div nz-col nzSpan="16">
-                        <h2 style="cursor: pointer; color: rgb(0, 38, 255);">
-                            {{ad.serviceName}}
-                        </h2>
-                        <h5>
-                            Price : <b>{{ad.price}}</b>
-                        </h5>
-                        <h5>
-                            Description : <b>{{ad.description}}</b>
-                            - Company Name : <b>{{ad.companyName}}</b>
-                        </h5>
-                    </div>
+        <div class="details-section">
+            <div class="ad-detail">
+                <div nz-col nzSpan="8">
+                    <img class="profile" [src]="avatarUrl" alt="profile" />
+                </div>
+                <div nz-col nzSpan="16">
+                    <h2>{{ad.serviceName}}</h2>
+                    <h5>Price : <b>{{ad.price}}</b></h5>
+                    <h5>Description : <b>{{ad.description}}</b> - Company Name : <b>{{ad.companyName}}</b></h5>
                 </div>
             </div>
-
-           
-            <div class="reservation-section">
-               
-            </div>
         </div>
+
+        <div class="reservation-section"></div>
+    </div>
+
 
         <div class="review-section">
            
         </div>
-    </div>
 </div>
+
 
