@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NzNotificationService } from 'ng-zorro-antd/notification';
 import { ClientService } from '../../services/client.service';
@@ -8,53 +8,48 @@ import { UserStorageService } from '../../../basic/services/stoarge/user-stoarge
 @Component({
   selector: 'app-review',
   templateUrl: './review.component.html',
-  styleUrl: './review.component.css'
+  styleUrls: ['./review.component.css']
 })
-export class ReviewComponent {
+export class ReviewComponent implements OnInit {
 
   bookId: number = this.activatedRoute.snapshot.params['id'];
   validateForm!: FormGroup;
 
-  constructor(private fb: FormBuilder,
+  constructor(
+    private fb: FormBuilder,
     private router: Router,
     private notification: NzNotificationService,
     private clientService: ClientService,
-    private activatedRoute: ActivatedRoute,
+    private activatedRoute: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
     this.validateForm = this.fb.group({
-      review: [null, Validators.required],
-      rating: [null, Validators.required]
+      review: [null, Validators.required]
     });
   }
 
-  giveReview(){
-    const reviewDTO = {
-      rating: this.validateForm.get('rating').value,
-      review: this.validateForm.get('review').value,
-      userId: UserStorageService.getUserId(),
-      bookId: this.bookId
+  giveReview(): void {
+    if (this.validateForm.invalid) {
+        this.notification.error('Form Error', 'Please fill out all required fields', { nzDuration: 5000 });
+        return;
     }
 
-    this.clientService.giveReview(reviewDTO).subscribe(res =>{
-      this.notification
-      .success(
-        'SUCCESS',
-        'Reviewr  posted successfully',
-        { nzDuration: 5000 }
-      );
-      this.router.navigateByUrl('client/bookings');
-    },
-     error => {
-       this.notification
-      .error(
-        'ERROR',
-        `${error.message}`,
-        { nzDuration: 5000 }
-      );
-       
-     })
-  }
+    const reviewDTO = {
+        review: this.validateForm.get('review')?.value,
+        // Pas de champ rating à ajouter
+    };
+
+    this.clientService.giveReview(reviewDTO).subscribe(
+        res => {
+            this.notification.success('SUCCESS', 'Review posted successfully', { nzDuration: 5000 });
+            this.router.navigateByUrl('client/bookings');
+        },
+        error => {
+            console.error('Error:', error);
+            this.notification.error('ERROR', `Error: ${error.message}`, { nzDuration: 5000 });
+        }
+    );
+}
 
 }

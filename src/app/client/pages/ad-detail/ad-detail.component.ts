@@ -61,7 +61,7 @@ export class AdDetailComponent implements OnInit {
                     'Request posted successfully',
                     { nzDuration: 5000 }
                 );
-                this.router.navigateByUrl('/client/Bookings');
+                this.router.navigateByUrl('/client/bookings');
             },
             error => {
                 console.error('Erreur lors de la réservation', error);

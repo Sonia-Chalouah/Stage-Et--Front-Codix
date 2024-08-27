@@ -1,65 +1,64 @@
 /* Container styling to center the content */
 .parent {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Full viewport height for vertical centering */
-    background-color: #ffffff; /* Light background color for better contrast */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensure it takes up at least the full viewport height */
+  background-color: #ffffff; /* Light background color for better contrast */
 }
 
+/* Child container styling */
 .child {
-    width: 100%;
-    max-width: 600px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-top: 20px;
+  width: 100%;
+  max-width: 500px; /* Adjusted for better balance */
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px;
 }
 
 /* Heading styling */
 h2 {
-    color: #333;
-    margin-bottom: 10px;
-    text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-align: center;
+  font-weight: 600;
 }
 
 /* Form styling */
 form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Add space between form elements */
 }
 
 /* Textarea styling */
 textarea {
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    font-size: 16px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-/* Rate component styling */
-nz-rate {
-    display: block;
-    margin: 20px 0;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  padding: 12px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  resize: vertical; /* Allow vertical resizing */
 }
 
 /* Button styling */
 button {
-    background-color: #000;
-    color: #fff;
-    border: 2px solid #000;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 10px;
-    align-self: center;
+  background-color: #01050a; /* Bootstrap primary blue */
+  color: #fff;
+  border: none; /* Remove border for a cleaner look */
+  border-radius: 5px;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+  align-self: center;
 }
 
 button:hover {
-    background-color: #333;
-    border-color: #333;
+  background-color: #0056b3; /* Darker blue for hover effect */
+  border-color: #0056b3; /* Match border color with background */
 }

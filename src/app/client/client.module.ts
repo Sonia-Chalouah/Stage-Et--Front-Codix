@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ClientRoutingModule } from './client-routing.module';
 import { ClientComponent } from './client.component';
@@ -14,7 +14,11 @@ import { AdDetailComponent } from './pages/ad-detail/ad-detail.component';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { MyBookingsComponent } from './pages/my-bookings/my-bookings.component';
 import { ReviewComponent } from './pages/review/review.component';
-import { NzRateModule } from 'ng-zorro-antd/rate';
+import { NgxStarRatingModule } from 'ngx-star-rating';
+import { ChatbotComponent } from './pages/chatbot/chatbot.component';
+import { BlogComponent } from './pages/blog/blog.component';
+
+
 @NgModule({
   declarations: [
     ClientComponent,
@@ -22,7 +26,10 @@ import { NzRateModule } from 'ng-zorro-antd/rate';
     ClientDashboardComponent,
     AdDetailComponent,
     MyBookingsComponent,
-    ReviewComponent
+    ReviewComponent,
+    ChatbotComponent,
+    BlogComponent,
+    
   ],
   imports: [
     CommonModule,
@@ -33,9 +40,10 @@ import { NzRateModule } from 'ng-zorro-antd/rate';
     NzInputModule,
     NzButtonModule,
     NzGridModule,
-    NzRateModule,
     NzNotificationModule,
+    NgxStarRatingModule,
     BsDatepickerModule.forRoot() 
-  ]
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA] // Ajout de CUSTOM_ELEMENTS_SCHEMA ici
 })
 export class ClientModule { }
